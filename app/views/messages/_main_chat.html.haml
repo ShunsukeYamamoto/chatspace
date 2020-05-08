@@ -1,0 +1,21 @@
+.main_chat
+  .main_chat--top
+    .group
+      %p.group--name test
+      %p.group--members Member:shunsuke yamamamoto hosoi
+    = link_to("#",class: "edit_btn" ) do
+      %p Edit
+  .main_chat--middle
+    .message
+      .message__top
+        %p.message__top--name shunsuke
+        %p.message__top--date 2019/01/01(Mon) 18:00:00
+      .message__bottom
+        %p.message__bottom--content aaaaaaaaaaaaaaaaa
+  .main_chat--bottom
+    .message_area
+      %input.message_text{:placeholder => "type a message", :type => "text"}/
+      %label.file_label{:for => "image_file"}
+        %i.far.fa-image
+        %input#image_file.file_uploader{:type => "file"}/
+    %input.message_submit{:type => "submit", :value => "Send"}/
