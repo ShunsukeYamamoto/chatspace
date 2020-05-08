@@ -1,0 +1,35 @@
+<div class="main_chat">
+
+  <div class="main_chat--top">
+    <div class="group">
+      <p class="group--name">test</p>
+      <p class="group--members">Member:shunsuke yamamamoto hosoi</p>
+    </div>
+    <%= link_to("#",class: "edit_btn" ) do%>
+      <p>Edit</p>
+    <% end%>
+  </div>
+
+  <div class="main_chat--middle">
+    <div class="message">
+      <div class="message__top">
+        <p class="message__top--name">shunsuke</p>
+        <p class="message__top--date">2019/01/01(Mon) 18:00:00</p>
+      </div>
+      <div class="message__bottom">
+        <p class="message__bottom--content">aaaaaaaaaaaaaaaaa</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="main_chat--bottom">
+    <div class="message_area">
+      <input type="text" class="message_text" placeholder="type a message">
+      <label for="image_file" class="file_label">
+        <i class="far fa-image"></i>
+        <input type="file" id="image_file" class="file_uploader">
+      </label>
+    </div>
+    <input type="submit" class="message_submit" value="Send">
+  </div>
+</div>
