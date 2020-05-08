@@ -1,0 +1,13 @@
+.side_bar
+  .side_bar--top
+    .user_area
+      %p.user_area--name #{current_user.name}
+      .user_area--menus
+        = link_to "#"  do
+          %i.fas.fa-edit
+        = link_to edit_user_path(current_user)  do
+          %i.fas.fa-cog
+  .side_bar--bottom
+    .message_list
+      %p.message_list--group_name tech_camp
+      %p.message_list--latest_message メッセージはありません
