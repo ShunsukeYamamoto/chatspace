@@ -40,6 +40,10 @@
       .message_list{
         padding: 20px 20px 40px 20px;
         color: white;
+        .group_link{
+          text-decoration: none;
+          color: white;
+        }
         &--group_name{
           font-size: 15px;
           font-weight: bold;
