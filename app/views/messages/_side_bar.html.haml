@@ -12,4 +12,8 @@
       .message_list
         =link_to "#",class: "group_link" do
           %p.message_list--group_name #{g.name}
-          %p.message_list--latest_message メッセージはありません
+          -if g.messages.any?
+            %p.message_list--latest_message #{g.messages.last.content}
+          - else
+            %p.message_list--latest_message メッセージはありません
+            

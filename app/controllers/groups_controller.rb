@@ -1,8 +1,10 @@
 class GroupsController < ApplicationController
 
   def index
-    
+    @group = current_user.groups.first
+    @messages = @group.messages
   end
+
   def new
     @group= Group.new
     @group.users << current_user
