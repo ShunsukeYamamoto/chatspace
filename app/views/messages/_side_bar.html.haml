@@ -3,11 +3,13 @@
     .user_area
       %p.user_area--name #{current_user.name}
       .user_area--menus
-        = link_to "#"  do
+        = link_to new_group_path  do
           %i.fas.fa-edit
         = link_to edit_user_path(current_user)  do
           %i.fas.fa-cog
   .side_bar--bottom
-    .message_list
-      %p.message_list--group_name tech_camp
-      %p.message_list--latest_message メッセージはありません
+    - current_user.groups.each do |g|
+      .message_list
+        =link_to "#",class: "group_link" do
+          %p.message_list--group_name #{g.name}
+          %p.message_list--latest_message メッセージはありません
